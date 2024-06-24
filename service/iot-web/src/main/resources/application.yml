@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///qf_iot?useUnicode=true&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: root
+    type: com.alibaba.druid.pool.DruidDataSource
+  application:
+    name: iot-web
+  profiles:
+    active: dev
+  redis:
+    host: 8.137.85.183
+    port: 6379
+    password: 520DANdan1314
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: qf_
+      logic-delete-value: -1
+      logic-not-delete-value: 0
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.qfedu.edu.pojo
+token:
+  config:
+    expire-time: 30
+    sign: iot-web
+config:
+  enable:
+    redis: true

@@ -7,13 +7,11 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
-/**
- * @author 当归
- * @title: R
- * @projectName CD-Java-JY-2401-Simple-Parent
- * @description: 统一结果集返回的这个R类
- * @date 2024/3/20  15:51
- */
+/*
+* @Author：当归 👨‍🦰❤️‍🩹️‍👧
+* @Date：2024/6/22
+* @serviceLogic: 返回给前端的都是这个R类
+*/
 @Data
 public class R {
 

@@ -13,54 +13,44 @@ import java.util.Date;
 /*
 * @Author：当归 👨‍🦰❤️‍🩹️‍👧
 * @Date：2024/6/22
-* @serviceLogic: 管理员用户表
+* @serviceLogic: 租户表
 */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("qf_user")
-public class User implements Serializable {
+@TableName("qf_tenant")
+public class Tenant implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     /**
      * 主键ID
      */
-    @TableId(value = "id", type = IdType.AUTO)
-    private Long id;
+    @TableId(value = "id", type = IdType.ID_WORKER)
+    private String id;
 
     /**
-     * 昵称
+     * 租户用户名
      */
-    private String nickName;
+    private String name;
 
     /**
-     * 真实名字
+     * 租户密码
      */
-    private String realName;
+    private String pwd;
 
     /**
-     * 用户名，需要加密存储，可用于登录
+     * 公司名称
      */
-    private String userName;
+    private String companyName;
 
     /**
-     * 密码，需要加密存储
+     * 公司工商执照编码
      */
-    private String password;
+    private String companyCode;
 
     /**
-     * 手机号，需要加密存储，可用于登录
-     */
-    private Integer phone;
-
-    /**
-     * 邮箱，需要加密存储，可用于登录
-     */
-    private String email;
-
-    /**
-     * 是否可用,1可用,2不可用
+     * 是否可用, 1可用, 2不可用
      */
     private Integer enable;
 
@@ -80,9 +70,29 @@ public class User implements Serializable {
     private Date updateTime;
 
     /**
-     * 逻辑删标识
+     * 逻辑删标识  0未删除  1删除
      */
     private Integer deleted;
+
+    /**
+     * 租户key
+     */
+    private String accessKey;
+
+    /**
+     * 租户秘钥
+     */
+    private String accessSecurit;
+
+    /**
+     * 审核状态,0待审核, 1通过, 2不通过
+     */
+    private Integer auditStatus;
+
+    /**
+     * 租户手机号
+     */
+    private String phone;
 
 
 }

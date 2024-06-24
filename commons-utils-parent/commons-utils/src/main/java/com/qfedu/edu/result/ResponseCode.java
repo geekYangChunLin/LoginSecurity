@@ -1,12 +1,10 @@
 package com.qfedu.edu.result;
 
-/**
- * @author 当归
- * @title: ResponseCode
- * @projectName CD-Java-JY-2401-Simple-Parent
- * @description: 这个是异常信息的枚举
- * @date 2024/4/15  14:10
- */
+/*
+* @Author：当归 👨‍🦰❤️‍🩹️‍👧
+* @Date：2024/6/22
+* @serviceLogic: 异常信息的枚举
+*/
 public enum ResponseCode {
     SUCCESS(0, "请求成功"),
     PARAMETER_EXCEPTION(100, "参数有误"),
@@ -18,6 +16,11 @@ public enum ResponseCode {
     USERNAME_PASSWORD_EMPTY_EXCEPTION(106, "用户名和密码不能为空"),
     AUTHENTICATION_EXCEPTION(107, "身份认证失败"),
     NO_PERMISSION_EXCEPTION(403, "没有权限访问"),
+    LIMIT_MINUTE_EXCEPTION(108, "超过了1分钟的限流、请明天再来测试"),
+    LIMIT_HOUR_EXCEPTION(109, "超过了1小时的限流、请明天再来测试"),
+    LIMIT_DAY_EXCEPTION(110, "超过了1天的限流、请明天再来测试"),
+    BLACK_EXCEPTION(111, "黑名单异常...."),
+    TOKEN_CHECK_EXCEPTION(112, "token检测有误...."),
     FAIL(-1, "请求失败");
     private Integer code;
     private String message;

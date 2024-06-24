@@ -10,14 +10,11 @@ import lombok.experimental.Accessors;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * <p>
- * 角色菜单
- * </p>
- *
- * @author xiaobobo
- * @since 2024-06-04
- */
+/*
+* @Author：当归 👨‍🦰❤️‍🩹️‍👧
+* @Date：2024/6/22
+* @serviceLogic: 角色管理
+*/
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
